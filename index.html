@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Автоподбор 69</title>
+    <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script>
+    $(document).ready(function(){
+        $(".main").onepage_scroll({
+            sectionContainer: "section",
+            responsiveFallback: 1100,
+            loop: true,
+            easing: "ease-in-out"
+        });
+        $(".up-arrow").click(function(){
+            $(".main").moveTo(1);
+        });
+        $('.go_to').click( function(){
+        var scroll_el = $(this).attr('href');
+        $(".up-arrow").animate({"opacity":"1"}, 150);
+        if ($(scroll_el).length != 0) {
+	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1000);
+        if(scroll_el == ".block_header")
+            $(".up-arrow").animate({"opacity":"0"}, 150);
+	    return false; 
+        }
+    });
+    });
+    </script>
+</head>
+<body>
+   <div class="main">
+    <section class="block block_header">
+        <div class="menu-area">
+            <img src="images/logo.png" alt="Auto69" class="logo">
+            <nav class="navigation">
+                <a href=".block_header" class="navigation-link main-page go_to">Главная<span class="underlined"></span></a>
+                <a href=".block_services" class="navigation-link service-page go_to">Услуги<span class="underlined"></span></a>
+                <a href=".block_guarantees" class="navigation-link guarantees-page go_to">Гарантии и преимущества<span class="underlined"></span></a>
+                <a href=".block_communication" class="navigation-link contact-page go_to">Контакты<span class="underlined"></span></a>
+            </nav>
+        </div>
+        
+        <h1>Покупаете автомобиль?</h1>
+        <p>Не попадайтесь на уловки нечестных продавцов!<br> 
+        Доверьте поиск подходящего Вам автомобиля команде наших экспертов.</p>
+        
+        <a href=".block_communication" class="header_button button go_to">Закажите бесплатную консультацию</a>
+    </section>
+    
+    <section class="block block_services">
+        <h1 class="head-text">Услуги</h1>
+        <div class="services-list above">
+            <div class="list-item fade4">
+                <div class="list-item_icon wheel-icon"></div>
+                <p class="list-item_discription underlined">Подбор авто (комплекс)</p>
+                <p class="list-item_price">15000 руб.</p>
+            </div>
+            <div class="list-item fade5">
+                <div class="list-item_icon worker-icon"></div>
+                <p class="list-item_discription underlined">Эксперт на день</p>
+                <p class="list-item_price">2500 руб.</p>
+            </div>
+            <div class="list-item fade6">
+                <div class="list-item_icon repair-icon"></div>
+                <p class="list-item_discription underlined">Осмотр выбранного вами авто</p>
+                <p class="list-item_price">850 руб.</p>
+            </div>
+        </div>
+        <h1 class="reverse above fade7" onclick="TurnPage(this)" id="buy">Вы продавец?<span class="underlined"></span></h1>
+        
+        <div class="white-plate white-car-plate"></div>
+        <div class="red-plate red-car-plate"></div>
+    </section>
+    
+    <section class="block block_guarantees">
+        <h1 class="head-text head-text_guarantees">Гарантии</h1>
+           <div class="gifts" onmousemove="listGiftsAnimate()">
+                <h2 class="gifts_head-text">Что получаете Вы?</h2>
+                <div class="gifts_gifts-list list">
+                    <p><i class="fa fa-clock fa-3x gift animate1"></i>&nbsp;Экономия времени</p>
+                    <p><i class="fa fa-dollar-sign fa-3x gift animate2"></i>&nbsp;Экономия денежных средств</p>
+                    <p><i class="fa fa-handshake fa-3x gift animate3"></i>&nbsp;Обоснованный торг</p>
+                    <p><i class="fa fa-rocket fa-3x gift animate4"></i>&nbsp;Отсутствие необходимости изнурительных поездок</p>
+                    <p><i class="fa fa-clipboard-list fa-3x gift animate5"></i>&nbsp;Ежедневные отчёты</p>
+                    <p><i class="fa fa-car fa-3x gift animate6"></i>&nbsp;Выбор среди лучших авто</p>
+                </div>
+            </div>
+        <div class="guarantees-area">
+            <div class="guarantee">
+                <h3 class="guarantee_head-text bold">Техническая исправность<span class="underlined"></span></h3>
+                <article>Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании модели развития.</article>
+            </div> <br>
+            <div class="guarantee">
+                <h3 class="guarantee_head-text bold">Юридическая чистота<span class="underlined"></span></h3>
+                <article>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение дальнейших направлений развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия. </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="block block_communication">
+        <h1 class="head-text head-text_communication above">Оставьте
+      заявку</h1>   
+        <form action="send.php" method="post" name="communicationForm">
+            <p>Имя:</p>
+            <input type="text" name="name" required> <br>
+            <p>Номер телефона:</p>
+            <input type="text" name="phone" required>
+            <button type="submit" class="send-button button">Заказать бесплатный звонок</button>
+        </form>
+        
+        <div class="contact-section">
+            <p>64-58-38&nbsp;<i class="fa fa-phone fa-2x"></i></p>
+            <p>yourmail@gmail.com&nbsp;<i class="fa fa-envelope fa-2x"></i></p>
+            <p>Тверь&nbsp;<i class="fa fa-map-marker-alt fa-2x"></i></p>
+        </div>
+        
+        <footer></footer>
+    </section>
+   </div>
+   <a href=".block_header" class="up-arrow go_to"></a>
+</body>
+</html>
