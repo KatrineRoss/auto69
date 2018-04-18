@@ -1,0 +1,727 @@
+*{
+    box-sizing: border-box;
+    transition: all ease-in-out 0.2s;
+}
+
+html{
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.red{
+    color: #bc0202;
+}
+
+.above {
+	position: relative;
+    z-index: 2;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    line-height: 9vh;
+}
+
+.head-text {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    margin: auto auto 10vh auto;
+	font-size: 10em;
+    line-height: 1em;
+    font-weight: 900;
+    letter-spacing: 0em;
+    color: rgba(237, 237, 237, 0.55);
+    cursor: default;
+}
+
+.block{
+    height: 100vh;
+    position: relative;
+    padding: 20vh 10vw 10vh 10vw;
+}
+
+.block_header {
+    background: url(images/block1.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.menu-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 15vh;
+    background: rgba(0, 0, 0, 0.50);
+    padding: 2vh 10vw 0 10vw;
+}
+
+.logo {
+	float: left;
+    height: 10vh;
+}
+
+.navigation {
+    display: flex;
+	float: right;
+    margin-top: 4vh;
+}
+
+.navigation-link {
+	margin-right: 4vw;
+    position: relative;
+}
+
+.navigation-link:last-child {
+	margin-right: 0;
+}
+
+.navigation-link .underlined::after{
+	width: 0;
+    left: -5%;
+}
+
+.navigation-link:hover .underlined::after {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 80%;
+    background: red;
+	left: 0;
+}
+
+.cell-phone {
+	position: absolute;
+    right: 10vw;
+    margin-top: 5vh;
+    font-size: 3em;
+    
+}
+
+.block_header h1{
+    margin-bottom: 0.3em;
+    width: 100%;
+    text-align: center;
+    line-height: 0.9em;
+}
+
+.block_header p{
+    line-height: 1.4em;
+    font-size: 1.3em;
+    width: 100%;
+	text-align: center;
+}
+
+.button { 
+	border: 1px solid white;
+    background: transparent;
+    height: 10vh;
+    line-height: 10vh;
+    color: white;
+    font-size: 1em;
+    padding: 0 3% 0 3%;
+}
+
+.button:hover {
+	background: rgba(255, 255, 255, 0.40);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.header_button {
+    width: 30vw;
+	position: absolute;
+    left: 35vw;
+    bottom: 10vh;
+}
+
+/*Block2*/
+
+.block_services {
+	background: url(images/block2_buy.jpg) no-repeat;
+    background-size: cover;
+}
+
+.services-list {
+	margin: 5vh auto auto 10%;
+    line-height: 25px;
+}
+
+.list-item {
+    position: relative;
+	width: 35vw;
+    max-height: 100px;
+    height: 100px;
+    line-height: 50px;
+    cursor: default;
+    margin-bottom: 5%;
+}
+
+.list-item_discription {
+    margin-top: 0;
+	margin-bottom: 0vh;
+    vertical-align: top;
+}
+
+.underlined::after {
+    transition: all ease-in-out 0.3s;
+	content: " ";
+    display: block;
+    position: absolute;
+    left: 20vw;
+    height: 1px;
+    width: 10vw;
+    background: white;
+}
+
+.list-item:hover .list-item_icon {
+	margin-left: -2vw;
+    margin-right: 3vw;
+}
+
+.list-item:hover .underlined::after {
+    transition: all ease-in-out 0.3s;
+	left: 10vw;
+    background: red;
+}
+
+.list-item_price {
+    margin-bottom: 0;
+    margin-top: 0;
+    vertical-align: bottom;
+	font-weight: bold;
+    width: 70%;
+    text-align: left;
+}
+
+.list-item_icon {
+    margin-right: 1vw;
+	float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.repair-icon {
+	background: url(images/icons/car_repair.png) no-repeat;
+    background-position: center;
+    background-size: auto 60%;
+}
+
+.worker-icon {
+	background: url(images/icons/worker.png) no-repeat;
+    background-position: center;
+    background-size: auto 60%;
+}
+
+.wheel-icon {
+	background: url(images/icons/wheel.png) no-repeat;
+    background-position: center;
+    background-size: auto 60%;
+}
+
+.reverse {
+	position: absolute;
+    bottom: 50%;
+    right: 25%;
+    cursor: pointer;
+}
+
+.reverse .underlined::after {
+    left: auto;
+	left: -5vw;
+}
+
+.reverse:hover .underlined::after {
+    background: red;
+    left: 10vw;
+}
+
+.red-car-plate {
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+	width: 80vw;
+    height: 30vw;
+    background: url(images/redcar_block2.png) no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+
+.white-car-plate {
+	position: absolute;
+    top: 0;
+    right: 0;
+	width: 40vw;
+    height: 45vw;
+    background: url(images/carwhite_block2.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+/*Block3*/
+
+.block_guarantees {
+    overflow: hidden;
+    background: url(images/block2_sell.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 15vh 10vw 5vh 10vw;
+}
+
+.head-text_guarantees {
+    left: auto;
+    right: 5vw;
+}
+
+.guarantees-area {
+    position: absolute;
+    top: 0;
+    left: 45vw;
+    text-align: left;
+    width: 35vw;
+    padding: 30vh 3vw 3vw 5vw;
+    height: 100%;
+    margin-top: 0;
+}
+
+.guarantee {
+	display: inline-block;
+}
+
+.guarantee:first-child{
+    margin-bottom: 10vh;
+}
+
+.guarantee_head-text {
+    margin-top: 0;
+    cursor: default;
+}
+
+.guarantee_head-text .underlined::after{
+    left: 10vw;
+    width: 15vw;
+    background: red;
+}
+
+.guarantee:hover .underlined::after{
+    left: 30vw;
+    width: 15vw;
+    background: white;
+}
+
+article{
+    cursor: default;
+}
+
+.gifts {
+    color: black;
+    position: absolute;
+    left: 10vw;
+    top: 0;
+    width: 35vw;
+    height: 100%;
+    padding: 10vh 1vw 0 1vw;
+    background: rgba(255, 255, 255, 0.63);
+	cursor: default;
+}
+
+.gifts_head-text {
+    cursor: default;
+    margin: 10% 0 0 1vw;
+    text-align: left;
+}
+
+.gifts_gifts-list {
+    list-style: none;
+}
+
+.list p{
+    position: relative;
+    padding-left: 75px;
+    width: 100%;
+	margin-bottom: 2vh;
+    height: 55px;
+    line-height: 55px;
+}
+
+.block_guarantees .fa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 70px;
+}
+
+/*Block4*/
+
+.block_communication {
+    background: url(images/block4.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.head-text_communication {
+    line-height: 0.6em;
+    white-space: pre;
+    top: 3vh;
+    left: auto;
+    right: 10vw;
+}
+
+form{
+    width: 37vw;
+    margin: 20vh 0  0 0;
+}
+
+input{
+    width: 60%;
+    float: right;
+    height: 5vh;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline:none;
+}
+
+form input, p{
+    display: inline-block;
+}
+
+form p{
+    margin-top: 0;
+    line-height: 5vh;
+}
+
+.contact-section{
+    position: absolute;
+    left: 10vw;
+    top: 65vh;
+    width: 37vw;
+    cursor: default;
+}
+
+.contact-section p{
+    margin-right: 3vw;
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.contact-section p:last-child{
+    margin-right: 0;
+}
+
+.block_communication .fa{
+    color: #bc0202;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 35px;
+}
+
+.send-button {
+	position: static;
+    width: 100%;
+}
+
+.up-arrow {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+	height: 100px;
+    width: 100px;
+    background: url(
+    images/icons/up.png) no-repeat;
+    background-position: center center;
+    background-size: 50% 70%;
+    text-align: center;
+    opacity: 0;
+    font-size: 0.8em;
+    animation: moveUpDown  1s infinite ease-in-out;
+}
+
+.up-arrow:hover {
+    cursor: pointer;
+}
+
+@keyframes moveUpDown {
+from {background-position: center center;}
+50% {background-position: top;}
+to {background-position: center center;}
+}
+
+[class*="fade"]{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1500px){
+    body{
+        font-size: 0.9em;
+    }
+    
+    .header_button {
+	    width: 35vw;
+}
+    .head-text {
+	font-size: 7em;
+}
+    
+    .block_guarantees {
+	padding: 5vh 5vw 5vh 5vw;
+}
+    
+    .guarantees-area {
+	left: 50vw;
+        width: 45vw;
+    padding: 20vh 0vw 0vw 0vw; 
+}
+    
+    .guarantee:first-child {
+	margin-bottom: 3vh;
+}
+    
+    .guarantee_head-text {
+	line-height: 5vh;
+}
+    
+    .gifts {
+    width: 45vw;
+    left: 5vw;
+	padding: 5vh 1vw 0 1vw;
+}
+    
+    .list p {
+	 margin-bottom: 0;
+}
+    
+    .block_guarantees .fa{
+        width: 50px;
+        background-size: contain;
+}
+    
+    .gifts_head-text {
+	margin-top: 0;
+}
+    
+    form, .contact-section{
+        width: 45vw;
+    }
+}
+
+/*Tablet and mobile landscape*/
+@media screen and (max-width: 1100px){
+    body{
+        font-size: 0.8em;
+    }
+    
+    .head-text {
+	font-size: 6em;
+}
+    
+    .block_header p{
+	margin-bottom: 50vh;
+}
+    
+    .block_guarantees {
+    padding: 0 5vw 0 5vw;
+	height: 140vh;
+}
+    
+    .guarantees-area {
+	padding: 20vh 0vw 0vw 5vw;
+}
+    
+    .gifts {
+	position: static;
+    margin-top: -5vh;
+    height: 140vh;
+}
+    
+    .contact-section, form{
+	position: static;
+    
+}
+    
+    .up-arrow {
+	right: 3vw;
+    bottom: 2vw;
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+}
+}
+
+@media screen and (max-width: 850px){
+    .block {
+	padding: 10vh 2vw 10vh 2vw;
+}
+    .menu-area {
+	padding: 2vh 5vw 0 5vw; 
+}
+    
+    .block_header h1{
+	margin-top: 10vh;
+}
+        .block_header p{
+	margin-bottom: 40vh;
+}
+    
+    .header_button{
+        width: 50vw;
+        left: 25vw;
+    }
+    
+    .services-list {
+	margin: 15vh auto auto 2vw;
+}
+    
+    .list-item {
+	    height: 70px;
+        width: 50vw;
+        line-height: 35px;
+}
+    
+    .reverse {
+	right: 15%;
+}
+    
+    .block_guarantees {
+	padding: 0;
+}
+    
+       .gifts {
+    margin-top: 160vh;
+    width: 100vw;
+    height: auto;
+    padding: 5vh 10vw 5vh 30vw;
+}
+    .list p{
+        width: 60vw;
+    }
+    
+    .gifts_head-text {
+	margin-left: -20vw;
+}
+    
+    .guarantees-area {
+	position: absolute;
+    top: 30vh;
+    right: 0;
+    left: 0;
+    padding: 0 25vw 0 25vw;
+}
+    
+    .guarantee {
+    width: 50vw;    
+	display: block;
+}
+    
+    .contact-section, form {
+	width: 50vw;
+}
+    
+    
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape){
+    body{
+        font-size: 0.6em;
+    }
+    
+    .head-text {
+	font-size: 4em;
+}
+    
+    .gifts {
+    margin-top: 170vh;
+    }
+}
+
+/*Tablet and mobile portrait*/
+@media screen and (max-width: 1100px) and (orientation: portrait){
+    body{
+        font-size: 0.6em;
+    }
+    
+    .block {
+	padding: 5vh 5vw 5vh 5vw;
+}
+    
+    .head-text {
+	font-size: 6em;
+}
+    .logo {
+	height: 5vh;
+}
+    
+    .header_button {
+	width: 80vw;
+        left: 10vw;
+        bottom: 3vh;
+}
+    
+    .block_header h1{
+        margin-top: 15vh;
+    }
+    
+    .block_header p{
+        margin-bottom: 15vh;
+    }
+    
+    .guarantees-area {
+	top: 10vh;
+}
+    
+    .gifts_head-text {
+	margin-left: -5vw;
+}
+    
+    .gifts {
+    padding: 2vh 5vw 2vh 15vw;    
+	margin-top: 65vh;
+        margin-left: -5vw;
+        font-size: 1.3em;
+}
+    .list p{
+        width: 80vw;
+    }
+    
+    .block_communication {
+	padding: 2vh 15vw 0 15vw;
+}
+    
+    .contact-section, form {
+	width: 70vw;
+}
+}
+
+@media screen and (max-width: 550px) and (orientation: portrait){
+    .gifts {
+        margin-top: 95vw;
+    }
+} 
+
